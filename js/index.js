@@ -3,6 +3,7 @@ let isScrollingLeft = false; // Added this line
 let scrollDirection = 10;
 const gallery = document.getElementById("gallery");
 const previewtext = document.getElementById("previewtext");
+const getstarted = document.getElementById("getstarted");
 
 function scrollGallery() {
   if (isScrollingRight) {
@@ -31,4 +32,5 @@ let colors = [
 ]
 setInterval(() => {
   previewtext.style.color = colors[Math.floor(Math.random() * colors.length)];
-}, 500);
+  getstarted.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
+}, 800);
