@@ -1,61 +1,106 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body, html{
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 20px;
-    height: 10vh;
-    width: 100%;
-    background-color: white;
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  height: 10vh;
+  width: 100%;
+  background-color: white;
 }
-header h1{
-    color: black;
-    text-shadow: 2px 0 2px pink,
-                -2px 0 2px purple;
+header h1 {
+  color: black;
+  text-shadow: 2px 0 2px pink, -2px 0 2px purple;
+  cursor: pointer;
 }
-header img{
-    height: 7vh;
-    width: auto;
+header img {
+  height: 7vh;
+  width: auto;
+  border: 3px solid black;
+  border-radius: 50%;
+  cursor: pointer;
 }
-main{
-    background-color: black;
-    height: 100vh;
-    width: 100%;
+main {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
 }
-#searchbar{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
-    border-radius: 5vh;
-    width: 30vw;
-    height: 8vh;
+#searchbar {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5vh;
+  width: 30vw;
+  height: 8vh;
 }
-#searchbar>input{
-    border: none;
-    padding: 10px;
-    border-radius: 5vh;
-    width: 70%;
-    border-left: none;
-    font-size: 2.5vh;
+#searchbar > input {
+  border: none;
+  padding: 10px;
+  border-radius: 5vh;
+  width: 70%;
+  border-left: none;
+  font-size: 2.5vh;
 }
-#searchbar>input:focus{
-    outline: none;
+#searchbar > input:focus {
+  outline: none;
 }
-#searchbar>button{
-    border: none;
-    border-radius: 5vh;
-    width: 30%;
-    background-color: black;
-    color: pink;
-    cursor: pointer;
+#searchbar > button {
+  border: none;
+  border-radius: 5vh;
+  width: 30%;
+  background-color: black;
+  color: pink;
+  cursor: pointer;
+}
+#gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 60vh;
+  width: 50vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 10vh;
+  scroll-behavior: smooth;
+  transition: transform 0.5s ease;
+}
+
+#gallery::-webkit-scrollbar {
+  display: none;
+}
+#gallery > img {
+  height: 100%;
+  width: auto;
+  padding: 2vh 7vh;
+}
+#hero {
+  padding: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70vh;
+  width: 100%;
+}
+#preview {
+    padding: 4vw;
+}
+#preview > h1 {
+  font-size: 6vh;
+  color: violet;
+}
+#preview > h2 {
+  font-size: 4vh;
+  color: white;
+  margin-top: 4vh;
 }
