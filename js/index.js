@@ -4,6 +4,7 @@ let scrollDirection = 10;
 const gallery = document.getElementById("gallery");
 const previewtext = document.getElementById("previewtext");
 const getstarted = document.getElementById("getstarted");
+let highlightcolor = getComputedStyle(document.documentElement).getPropertyValue("--highlight-color"); // Added this line to get the highlight color from the document.querySelector(":root")
 
 function scrollGallery() {
   if (isScrollingRight) {
@@ -31,6 +32,6 @@ let colors = [
   "indigo",
 ]
 setInterval(() => {
-  previewtext.style.color = colors[Math.floor(Math.random() * colors.length)];
-  getstarted.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
+  highlightcolor = colors[Math.floor(Math.random() * colors.length)];
+  document.querySelector(":root").style.setProperty("--highlight-color", highlightcolor);
 }, 800);
