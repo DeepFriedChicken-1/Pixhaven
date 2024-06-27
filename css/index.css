@@ -8,7 +8,7 @@
 }
 body,
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   overflow: hidden;
   height: 100%;
   width: 100%;
@@ -44,8 +44,16 @@ header img {
 }
 main {
   background-color: black;
-  height: 100vh;
-  width: 100%;
+  height: 100%;
+  width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+main::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 #searchbar {
   display: flex;
@@ -133,4 +141,28 @@ main {
   border: 6px solid var(--highlight-color);
   background-color: black;
   color: white;
+}
+#collections{
+  width: 94vw;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  padding: 10vh 2vw;
+  overflow: hidden;
+  background-color: white;
+  margin: 3vw;
+  border-radius: 4vw;
+}
+#collections>img{
+  width: 30vw;
+  height: auto;
+}
+#collections h1{
+  font-size: 8vw;
+  color: var(--highlight-color);
+
+}
+#collections p{
+  font-size: 4vw;
+  transition: 0.4s ease;
 }
