@@ -6,6 +6,9 @@ const previewtext = document.getElementById("previewtext");
 const getstarted = document.getElementById("getstarted");
 let highlightcolor = getComputedStyle(document.documentElement).getPropertyValue("--highlight-color"); // Added this line to get the highlight color from the document.querySelector(":root")
 
+function searchImages() {
+  location.replace("./html/dashboard.html?query=" + document.getElementById("searchQuery").value);
+}
 function scrollGallery() {
   if (isScrollingRight) {
     if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10) {
@@ -28,10 +31,11 @@ let colors = [
   "purple",
   "blue",
   "violet",
-  "pink",
+  "whitesmoke",
   "indigo",
 ]
 setInterval(() => {
   highlightcolor = colors[Math.floor(Math.random() * colors.length)];
   document.querySelector(":root").style.setProperty("--highlight-color", highlightcolor);
 }, 800);
+

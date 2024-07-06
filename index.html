@@ -5,51 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixhaven</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/index.js"></script>
   </head>
   <body>
     <header>
       <h1>Pixhaven</h1>
+
       <div id="searchbar">
-        <input type="text" id="" placeholder="Search for images on Pixhaven" />
-        <button>Search</button>
+        <input
+          type="text"
+          id="searchQuery"
+          placeholder="Search for images on Pixhaven"
+        />
+        <button onclick="searchImages()">Search</button>
       </div>
+
       <div id="account">
-        <img src="./assets/acc_placeholder.png" alt="">
-        <img src="./assets/menu.png" alt="">
+        <img src="./assets/acc_placeholder.png" alt="" />
+        <img src="./assets/menu.png" alt="" />
       </div>
     </header>
     <main>
-        <div id="hero">
-            <div id="gallery">
-              <img src="./assets/gallery/1.jpg" alt=""> 
-              <img src="./assets/gallery/2.jpg" alt="">
-              <img src="./assets/gallery/3.jpg" alt="">
-              <img src="./assets/gallery/4.jpg" alt="">
-              <img src="./assets/gallery/5.jpg" alt="">
-              <img src="./assets/gallery/6.jpg" alt="">
-              <img src="./assets/gallery/7.jpg" alt="">
-              <img src="./assets/gallery/8.jpg" alt="">
-            </div>
-            <div id="preview">
-                <h1 id="previewtext">Thousands of images. A whole community. Just for you,</h1>
-                <h2>and just one click away.</h2>
-                <button id="getstarted">GET STARTED</button>
-            </div>
+      <div id="hero">
+        <div id="gallery">
+          <img src="./assets/gallery/1.jpg" alt="" />
+          <img src="./assets/gallery/2.jpg" alt="" />
+          <img src="./assets/gallery/3.jpg" alt="" />
+          <img src="./assets/gallery/4.jpg" alt="" />
+          <img src="./assets/gallery/5.jpg" alt="" />
+          <img src="./assets/gallery/6.jpg" alt="" />
+          <img src="./assets/gallery/7.jpg" alt="" />
+          <img src="./assets/gallery/8.jpg" alt="" />
         </div>
-        <div id="collections">
-          <img src="./assets/collections.png" alt="">
-          <div>
-            <h1>Collections</h1>
-            <p>Make private collections of images or share with other users.</p>
-          </div>
+        <div id="preview">
+          <h1 id="previewtext">
+            Thousands of images. A whole community. Just for you,
+          </h1>
+          <h2>and just one click away.</h2>
+          <button id="getstarted">GET STARTED</button>
         </div>
+      </div>
+
+      <div id="images"></div>
+      <div id="collections" class="panel">
+        <img src="./assets/collections.png" alt="" />
+        <div>
+          <h1>Collections</h1>
+          <p>Make private collections of images or share with other users.</p>
+        </div>
+      </div>
+
+      <div id="edit" class="panel">
+        <div>
+          <h1>Edit</h1>
+          <p>Edit your own images or those shared with you.</p>
+        </div>
+        <img src="./assets/edit.jpg" alt="" />
+      </div>
     </main>
-    <aside>
-      
-    </aside>
-    <footer>
-      
-    </footer>
+    <aside></aside>
+    <footer></footer>
   </body>
-  <script src="./js/index.js"></script>
 </html>

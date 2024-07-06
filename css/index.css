@@ -1,5 +1,5 @@
-:root{
-  --highlight-color : white;
+:root {
+  --highlight-color: white;
 }
 * {
   margin: 0;
@@ -8,7 +8,8 @@
 }
 body,
 html {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   overflow: hidden;
   height: 100%;
   width: 100%;
@@ -33,13 +34,13 @@ header img {
   border-radius: 50%;
   cursor: pointer;
 }
-#account{
+#account {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 20vw;
 }
-#account img:first-child{
+#account img:first-child {
   border: 3px solid black;
 }
 main {
@@ -49,7 +50,7 @@ main {
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 main::-webkit-scrollbar {
@@ -63,7 +64,7 @@ main::-webkit-scrollbar {
   width: 30vw;
   height: 8vh;
 }
-#searchbar > input {
+#searchbar input {
   border: none;
   padding: 10px;
   border-radius: 5vh;
@@ -71,10 +72,10 @@ main::-webkit-scrollbar {
   border-left: none;
   font-size: 2.5vh;
 }
-#searchbar > input:focus {
+#searchbar input:focus {
   outline: none;
 }
-#searchbar > button {
+#searchbar button {
   border: none;
   border-radius: 5vh;
   width: 30%;
@@ -142,27 +143,46 @@ main::-webkit-scrollbar {
   background-color: black;
   color: white;
 }
-#collections{
-  width: 94vw;
+.panel {
+  width: 100vw;
   height: max-content;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 10vh 2vw;
   overflow: hidden;
-  background-color: white;
-  margin: 3vw;
-  border-radius: 4vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 20vh 10vw;
 }
-#collections>img{
-  width: 30vw;
-  height: auto;
+#collections {
+  background: linear-gradient(180deg, black 0%, midnightblue 80%, purple 100%);
 }
-#collections h1{
-  font-size: 8vw;
-  color: var(--highlight-color);
+#collections > img {
+  box-shadow: 2px 0 30px pink, -2px 0 30px purple;
 
 }
-#collections p{
-  font-size: 4vw;
+.panel > img {
+  width: 30vw;
+  height: auto;
+  margin-right: 5vw;
+  border-radius: 15px;
+  padding: 1vw;
+  background-color: white;
+}
+.panel h1 {
+  font-size: 6vw;
+  color: var(--highlight-color);
   transition: 0.4s ease;
+  margin: 2vh 0;
+}
+.panel p {
+  font-size: 2vw;
+  color: white;
+}
+#edit {
+  background: linear-gradient(180deg, purple 0%, violet 80%, pink 90%, white 100%);
+}
+#edit > img {
+  box-shadow: 2px 0 30px midnightblue, -2px 0 30px black;
+
 }

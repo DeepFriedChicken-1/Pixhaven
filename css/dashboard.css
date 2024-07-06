@@ -1,0 +1,132 @@
+:root {
+  --highlight-color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+}
+header h1 {
+  color: black;
+  text-shadow: 2px 0 2px pink, -2px 0 2px purple;
+  cursor: pointer;
+}
+header img {
+  height: 7vh;
+  width: auto;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#account {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20vw;
+}
+#account img:first-child {
+  border: 3px solid black;
+}
+#canvas {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+aside {
+  height: 100%;
+  width: 20vw;
+  background-color: rgba(0, 0, 10, 0.9);
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+main {
+  background-color: black;
+  height: 100%;
+  width: 80vw;
+  overflow-y: scroll;
+  padding-bottom: 10vh;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+main::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+#searchbar {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid white;
+  border-radius: 5vh;
+  width: 75vw;
+  height: 8vh;
+  margin: 2vh;
+}
+#searchbar input {
+  border: none;
+  padding: 10px;
+  border-radius: 5vh;
+  width: 70%;
+  border-left: none;
+  font-size: 2.5vh;
+}
+#searchbar input:focus {
+  outline: none;
+}
+#searchbar button {
+  border: none;
+  border-radius: 5vh;
+  width: 30%;
+  background-color: black;
+  color: pink;
+  cursor: pointer;
+}
+#images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4vh;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh;
+}
+.image {
+  height: auto;
+  width: 15vw;
+  margin: 2vh;
+}
+.image {
+  color: none;
+  transition: color 0.4s ease;
+}
+.image > a {
+  text-decoration: none;
+  color: palevioletred;
+}
+.image:hover {
+  color: white;
+}
+footer {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  height: 20vh;
+  width: 100%;
+}
