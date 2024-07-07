@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             imgDiv.appendChild(downloadLink);
             
             imagesDiv.appendChild(imgDiv);
+            document.getElementsByTagName('footer')[0].style.position = 'static';
         });
     }
 

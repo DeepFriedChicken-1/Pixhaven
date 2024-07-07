@@ -101,14 +101,15 @@ main::-webkit-scrollbar {
 #images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 4vh;
+  grid-gap: 5vh;
   justify-content: center;
   align-items: center;
-  margin: 2vh;
+  padding: 4vh;
+
 }
 .image {
   height: auto;
-  width: 15vw;
+  width: 12vw;
   margin: 2vh;
 }
 .image {
@@ -125,6 +126,8 @@ main::-webkit-scrollbar {
 footer {
   background-color: white;
   color: black;
+  position: fixed;
+  bottom: 0;
   text-align: center;
   padding: 10px;
   height: 20vh;
