@@ -112,9 +112,13 @@ main::-webkit-scrollbar {
   width: 12vw;
   margin: 2vh;
 }
+#canvas{
+  width: 100vw;
+}
 .image {
   color: none;
   transition: color 0.4s ease;
+  cursor: pointer;
 }
 .image > a {
   text-decoration: none;
@@ -132,4 +136,19 @@ footer {
   padding: 10px;
   height: 20vh;
   width: 100%;
+}
+#toppanel{
+  height: 7vh;
+  padding: 1vh;
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+}
+#toppanel img{
+  height: inherit;
+  width: auto;
+}
+.sidepanel{
+  color: white;
+  margin: 2vh 2vw;
 }

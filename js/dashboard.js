@@ -65,4 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
         searchQuery.value = initialQuery;
         searchImages(initialQuery);
     }
+    const arrow = document.getElementById("arrow")
+    arrow.addEventListener("click", function(){
+        document.getElementById("aside").style.width = "4vw"
+    })
 });

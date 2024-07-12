@@ -1,4 +1,5 @@
-let isScrollingRight = true;
+document.addEventListener("DOMContentLoaded", function () {
+  let isScrollingRight = true;
 let isScrollingLeft = false; // Added this line
 let scrollDirection = 10;
 const gallery = document.getElementById("gallery");
@@ -38,4 +39,8 @@ setInterval(() => {
   highlightcolor = colors[Math.floor(Math.random() * colors.length)];
   document.querySelector(":root").style.setProperty("--highlight-color", highlightcolor);
 }, 800);
-
+document.getElementById("searchbar").addEventListener("submit", (event) => {
+  event.preventDefault();
+  searchImages();
+})
+})
