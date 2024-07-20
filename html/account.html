@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixhaven</title>
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/account.css" />
+    <script src="../js/account.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Pixhaven</h1>
+      <h1>Dashboard</h1>
+      <div id="account">
+        <img src="../assets/menu.png" alt="" />
+      </div>
+    </header>
+    <main>
+      <div id="canvas">
+        <div>
+          <h1>Sign up</h1>
+          <form id="signupform">
+            <input type="text" placeholder="Enter your username" />
+            <input type="email" placeholder="Enter your email" />
+            <div>
+              <input type="password" placeholder="Enter your password" />
+              <button id="togglePassword" onclick="togglePasswordVisibility()">
+                Show Password
+              </button>
+            </div>
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
+        <div>
+          <h1>Login</h1>
+          <form>
+            <input type="email" placeholder="Enter your email" />
+            <div>
+              <input type="password" placeholder="Enter your password" />
+              <button id="togglePassword" onclick="togglePasswordVisibility()">
+                Show Password
+              </button>
+            </div>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

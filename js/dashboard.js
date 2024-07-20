@@ -46,8 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
             imgDiv.appendChild(downloadLink);
             
             imagesDiv.appendChild(imgDiv);
-            document.getElementsByTagName('footer')[0].style.position = 'static';
+
+            imgDiv.addEventListener('click', function() {
+                location.replace(`./imagepage.html?id=${imgElement.src}`);
+            });
         });
+        document.getElementsByTagName('footer')[0].style.position = 'static';
     }
 
     const searchQuery = document.getElementById("searchQuery");

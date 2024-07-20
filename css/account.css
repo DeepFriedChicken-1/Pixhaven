@@ -1,0 +1,92 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, rgb(23, 23, 23) 0%, purple 25%, palevioletred 50%, pink 75%, white 100%);
+}
+#canvas{
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    height: 60vh;
+    width: 60vw;
+    padding: 5vw;
+    justify-content: space-between;
+}
+#canvas > div{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#canvas > div > h1{
+    margin-bottom: 20px;
+}
+#canvas > div > form{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#canvas > div > form > input {
+    margin-bottom: 20px;
+    height: 5vh;
+    width: 25vw;
+    border-radius: 2.5vh;
+    padding-left: 10px;   
+    border-color: transparent; 
+    border: 1px solid rgb(23, 23, 23);
+    box-shadow: 1px 1px 1px 1px palevioletred;
+}
+#canvas > div > form > div{
+    margin-bottom: 20px;
+    height: 5vh;
+    width: 25vw;
+    border-radius: 2.5vh;
+    padding: 0 10px;   
+    border-color: transparent; 
+    border: 1px solid rgb(23, 23, 23);
+    box-shadow: 1px 1px 1px 1px palevioletred;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#canvas > div > form > div > input{
+    border: none;
+    background-color: transparent;
+    width:60%;
+    height: 100%;
+}
+#canvas > div > form > div > input:focus{
+    outline: none;
+}
+#canvas > div > form > div > button{
+    border: none;
+    background-color: rgb(23, 23, 23);
+    border-radius: 2.5vh;
+    color: white;
+    width: 30%;
+    height: 100%;
+    cursor: pointer;
+}
+#canvas > div > form > input:focus{
+    outline: none;
+}
+#canvas > div > form > button{
+    height: 5vh;
+    width: 25vw;
+    border-radius: 2.5vh;
+    background-color: rgb(23, 23, 23);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+#canvas > div > form > button:hover{
+    background-color: white;
+    color: rgb(23, 23, 23);
+}
