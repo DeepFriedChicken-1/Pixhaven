@@ -16,17 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       return false;
     }
-    function togglePasswordVisibility() {
-        var passwordInput = document.querySelector('input[name="password"]');
-        var toggleButton = document.getElementById('togglePassword');
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            toggleButton.textContent = 'Hide Password';
-        } else {
-            passwordInput.type = 'password';
-            toggleButton.textContent = 'Show Password';
-        }
-    }
     // Email validation: simple email regex
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {

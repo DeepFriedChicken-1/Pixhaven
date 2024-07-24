@@ -43,37 +43,6 @@ main{
     border: 1px solid rgb(23, 23, 23);
     box-shadow: 1px 1px 1px 1px palevioletred;
 }
-#canvas > div > form > div{
-    margin-bottom: 20px;
-    height: 5vh;
-    width: 25vw;
-    border-radius: 2.5vh;
-    padding: 0 10px;   
-    border-color: transparent; 
-    border: 1px solid rgb(23, 23, 23);
-    box-shadow: 1px 1px 1px 1px palevioletred;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#canvas > div > form > div > input{
-    border: none;
-    background-color: transparent;
-    width:60%;
-    height: 100%;
-}
-#canvas > div > form > div > input:focus{
-    outline: none;
-}
-#canvas > div > form > div > button{
-    border: none;
-    background-color: rgb(23, 23, 23);
-    border-radius: 2.5vh;
-    color: white;
-    width: 30%;
-    height: 100%;
-    cursor: pointer;
-}
 #canvas > div > form > input:focus{
     outline: none;
 }
@@ -89,4 +58,34 @@ main{
 #canvas > div > form > button:hover{
     background-color: white;
     color: rgb(23, 23, 23);
+}
+.passwordContainer{
+    margin-bottom: 20px;
+    height: 5vh;
+    width: 25vw;
+    border-radius: 2.5vh;
+    border-color: transparent; 
+    border: 1px solid rgb(23, 23, 23);
+    box-shadow: 1px 1px 1px 1px palevioletred;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.passwordContainer button{
+    border: none;
+    background-color: palevioletred;
+    color: black;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 1vh 2.5vh 2.5vh 1vh;
+    padding: 10px;
+}
+.passwordContainer input{
+    border: none;
+    height: 100%;
+    border-radius: 2.5vh 1vh 1vh 2.5vh;
+    padding-left: 10px;
+}
+.passwordContainer input:focus{
+    outline: none;
 }

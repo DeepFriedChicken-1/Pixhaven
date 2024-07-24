@@ -23,8 +23,8 @@
           <form id="signupform">
             <input type="text" placeholder="Enter your username" />
             <input type="email" placeholder="Enter your email" />
-            <div>
-              <input type="password" placeholder="Enter your password" />
+            <div class="passwordContainer">
+              <input name ="password" type="password" placeholder="Enter your password" />
               <button id="togglePassword" onclick="togglePasswordVisibility()">
                 Show Password
               </button>
@@ -36,8 +36,8 @@
           <h1>Login</h1>
           <form>
             <input type="email" placeholder="Enter your email" />
-            <div>
-              <input type="password" placeholder="Enter your password" />
+            <div class="passwordContainer">
+              <input name="password" type="password" placeholder="Enter your password" />
               <button id="togglePassword" onclick="togglePasswordVisibility()">
                 Show Password
               </button>
@@ -48,4 +48,17 @@
       </div>
     </main>
   </body>
+  <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.querySelector('input[name="password"]');
+      var toggleButton = document.getElementById('togglePassword');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleButton.textContent = 'Hide Password';
+      } else {
+        passwordInput.type = 'password';
+        toggleButton.textContent = 'Show Password';
+      }
+    }
+  </script>
 </html>
