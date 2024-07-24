@@ -1,5 +1,6 @@
 :root {
     --highlight-color: white;
+    --background-color: black;
   }
   * {
     margin: 0;
@@ -21,12 +22,17 @@
     padding: 0 20px;
     height: 10vh;
     width: 100%;
-    background-color: white;
+    background-color: var(--highlight-color);
+    transition: background-color 0.4s ease;
   }
   header h1 {
-    color: black;
+    color: var(--background-color);
     text-shadow: 2px 0 2px pink, -2px 0 2px purple;
     cursor: pointer;
+    transition: color 0.4s ease;
+  }
+  header a{
+    text-decoration: none;
   }
   header img {
     height: 7vh;
@@ -39,4 +45,37 @@
     justify-content: space-around;
     align-items: center;
     width: 20vw;
+  }
+  #mode {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+  }
+  #modeButton {
+    cursor: pointer;
+    background: url("../assets/theme_icon.jpg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 5vh;
+    width: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.4s ease;
+    border-radius: 50%;
+  }
+  #modeText {
+    color: var(--background-color);
+    font-size: 2vh;
+    font-weight: bold;
+  }
+  #modeSwitch {
+    display: none;
+  }
+  .dark{
+    transform: rotate(0deg);
+  }
+  .light {
+    transform: rotate(180deg);
   }

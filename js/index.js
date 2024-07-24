@@ -1,11 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(":root").style.setProperty("--highlight-color", "white");
+  document.querySelector(":root").style.setProperty("--background-color", "black");
+
+
   let isScrollingRight = true;
 let isScrollingLeft = false; // Added this line
 let scrollDirection = 10;
 const gallery = document.getElementById("gallery");
 const previewtext = document.getElementById("previewtext");
 const getstarted = document.getElementById("getstarted");
-let highlightcolor = getComputedStyle(document.documentElement).getPropertyValue("--highlight-color"); // Added this line to get the highlight color from the document.querySelector(":root")
+let highlightcolor = getComputedStyle(document.documentElement).getPropertyValue("--shift-color"); // Added this line to get the highlight color from the document.querySelector(":root")
 
 function searchImages() {
   location.replace("./html/dashboard.html?query=" + document.getElementById("searchQuery").value);
@@ -37,7 +41,7 @@ let colors = [
 ]
 setInterval(() => {
   highlightcolor = colors[Math.floor(Math.random() * colors.length)];
-  document.querySelector(":root").style.setProperty("--highlight-color", highlightcolor);
+  document.querySelector(":root").style.setProperty("--shift-color", highlightcolor);
 }, 800);
 document.getElementById("searchbar").addEventListener("submit", (event) => {
   event.preventDefault();

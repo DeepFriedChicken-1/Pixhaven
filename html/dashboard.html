@@ -4,23 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixhaven | Dashboard</title>
-    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/dashboard.css" />
     <script src="../js/dashboard.js"></script>
   </head>
   <body>
     <header>
-      <h1>Pixhaven</h1>
+      <a href="../index.html"><h1>Pixhaven</h1></a>
       <h1>Dashboard</h1>
       <div id="account">
-        <a href="./account.html"><img src="../assets/acc_placeholder.png" alt=""/></a>
+        <a href="./account.html"
+          ><img src="../assets/acc_placeholder.png" alt=""
+        /></a>
         <img src="../assets/menu.png" alt="" />
+        <div id="mode">
+          <label for="modeSwitch" id="modeButton" class="dark" onclick="toggleMode()"></label>
+          <p id="modeText">Dark</p>
+          <input
+            type="checkbox"
+            id="modeSwitch"
+            aria-label="Toggle light and dark mode"
+          />
+        </div>
       </div>
     </header>
     <div id="canvas">
       <aside id="aside">
         <div id="toppanel">
-          <img id="arrow" src="../assets/arrow.jpg" alt="">
+          <img id="arrow" src="../assets/arrow.png" alt="" />
         </div>
         <div class="sidepanel">
           <h1>Collections</h1>
@@ -37,20 +48,44 @@
         <div class="sidepanel">
           <h1></h1>
         </div>
-
       </aside>
       <main>
-      <form id="searchbar">
-        <input type="text" id="searchQuery" placeholder="Search for images on Pixhaven"/>
-        <button type="submit">Search</button>
-      </form>
-       <div id="images"></div>
-       <footer>
-        <p>&copy; Pixhaven. All rights reserved.</p>
-        <p>Version 1.0.0</p>
-        <p>All images are sourced from <a href="https://unsplash.com">Unsplash</a></p>
-      </footer>
+        <form id="searchbar">
+          <input
+            type="text"
+            id="searchQuery"
+            placeholder="Search for images on Pixhaven"
+          />
+          <button type="submit">Search</button>
+        </form>
+        <div id="images"></div>
+        <footer>
+          <p>&copy; Pixhaven. All rights reserved.</p>
+          <p>Version 1.0.0</p>
+          <p>
+            All images are sourced from
+            <a href="https://unsplash.com">Unsplash</a>
+          </p>
+        </footer>
       </main>
     </div>
   </body>
+  <script>
+    function toggleMode() {
+      const modeButton = document.getElementById("modeButton");
+      if (modeButton.classList.contains("dark")) {
+        modeButton.classList.remove("dark");
+        modeButton.classList.add("light");
+        document.documentElement.style.setProperty('--background-color', 'white');
+        document.documentElement.style.setProperty('--highlight-color', 'black');
+        document.getElementById("modeText").innerText = "Light";
+      } else {
+        modeButton.classList.remove("light");
+        modeButton.classList.add("dark");
+        document.documentElement.style.setProperty('--background-color', 'black');
+        document.documentElement.style.setProperty('--highlight-color', 'white');
+        document.querySelector("#modeText").innerText = "Dark";
+      }
+    }
+  </script>
 </html>

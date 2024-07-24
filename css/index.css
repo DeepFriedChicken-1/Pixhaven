@@ -1,3 +1,6 @@
+:root {
+  --shift-color: white;
+}
 main {
   background-color: black;
   height: 100%;
@@ -10,6 +13,9 @@ main {
 
 main::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
+}
+header h1{
+  color: black;
 }
 #searchbar {
   display: flex;
@@ -72,7 +78,7 @@ main::-webkit-scrollbar {
 }
 #preview > h1 {
   font-size: 6vh;
-  color: var(--highlight-color);
+  color: var(--shift-color);
   transition: 0.4s ease;
 }
 #preview > h2 {
@@ -81,7 +87,7 @@ main::-webkit-scrollbar {
   margin: 4vh 0;
 }
 #preview > button {
-  border: 6px solid var(--highlight-color);
+  border: 6px solid var(--shift-color);
   margin-top: 4vh;
   width: 100%;
   height: 10vh;
@@ -94,7 +100,7 @@ main::-webkit-scrollbar {
   transition: 0.4s ease;
 }
 #preview > button:hover {
-  border: 6px solid var(--highlight-color);
+  border: 6px solid var(--shift-color);
   background-color: black;
   color: white;
 }
@@ -126,7 +132,7 @@ main::-webkit-scrollbar {
 }
 .panel h1 {
   font-size: 6vw;
-  color: var(--highlight-color);
+  color: var(--shift-color);
   transition: 0.4s ease;
   margin: 2vh 0;
 }

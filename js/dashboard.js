@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             imagesDiv.appendChild(imgDiv);
 
             imgDiv.addEventListener('click', function() {
-                location.replace(`./imagepage.html?id=${imgElement.src}`);
+                location.replace(`./imagepage.html?id=${imgElement.src}&photographer=${image.user.name}&likes=${image.likes}`);
             });
         });
         document.getElementsByTagName('footer')[0].style.position = 'static';
@@ -71,6 +71,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     const arrow = document.getElementById("arrow")
     arrow.addEventListener("click", function(){
+        if(document.getElementById("aside").style.width == "4vw"){
+            document.getElementById("aside").style.width = "20vw"
+            Array.from(document.getElementsByClassName("sidepanel")).forEach(element => {
+                element.style.opacity = "1"
+            })
+            document.getElementById("arrow").style.transform = "rotate(0deg)"
+            document.querySelector("main").style.width = "80vw"
+        }
+        else{
         document.getElementById("aside").style.width = "4vw"
+        Array.from(document.getElementsByClassName("sidepanel")).forEach(element => {
+            element.style.opacity = "0"
+        })
+        document.getElementById("arrow").style.transform = "rotate(180deg)"
+        document.querySelector("main").style.width = "96vw"
+        }
     })
 });
